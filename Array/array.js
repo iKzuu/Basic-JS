@@ -86,11 +86,17 @@ var nama = ["Anang", "Setiaji", "iKzuu", "Setiajoss", "Kazuma"];
 // console.log(angka.join('-')); // sudah urut coy
 
 // 8. filter : mengembalikan banyak nilai
+// var angka = [1,10,2,20,5,3,6,8,4,7];
+// var angka2 = angka.filter(function(x) {
+//     return x > 5;
+// });
+
+// 9. find : menemukan satu nilai
 var angka = [1,10,2,20,5,3,6,8,4,7];
-var angka2 = angka.filter(function(x) {
+var angka2 = angka.find(function(x) {
     return x > 5;
 });
-console.log(angka2.join('-'));
+console.log(angka2);
 
 // console.log(arr.join(' - '));
 // console.log(arr2.join(' - '));
