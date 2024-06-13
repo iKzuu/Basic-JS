@@ -1,11 +1,11 @@
-let penumpang = ['Anang', undefined, 'iKzuu'];
+let penumpang = ['Anang', undefined, 'Setiaji'];
 
 let tambahPenumpang = function(namaPenumpang, penumpang) {
     // jika angkot kosong
     if (penumpang.length == 0) {
         // menambah penumpang pada awal array
         penumpang.push(namaPenumpang);
-        // kembalikan nilai & keliar function
+        // kembalikan nilai & keluar function
         return penumpang;
     } else {
         // menelusuri seluruh kursi
@@ -28,5 +28,18 @@ let tambahPenumpang = function(namaPenumpang, penumpang) {
 }
 
 let hapusPenumpang = function(namaPenumpang, penumpang) {
-    
+    if (penumpang.length == 0) {
+        console.log('Angkot masih kosong ndlogo!');
+    } else {
+        for (let i = 0; i < penumpang.length; i++) {
+            if (penumpang[i] == namaPenumpang) {
+                penumpang[i] = undefined;
+                return penumpang;
+            } else if ( i == penumpang.length - 1) {
+                console.log(`${namaPenumpang} tidak ada di dalam angkot!`);
+                return penumpang;
+            }
+        }
+    }
+    return penumpang;
 }
